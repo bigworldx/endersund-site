@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>endersund – Sound Design & Composition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Banner -->
+  <header>
+    <img src="endersund banner 7.png" alt="endersund banner" class="banner">
+  </header>
+
+  <!-- Previous Work -->
+  <section class="section">
+    <div class="metallic-bar">PREVIOUS WORK</div>
+    <h2>Sound Design</h2>
+
+    <div class="video-wrapper">
+      <div class="video-box" data-video="https://www.youtube.com/embed/P_DG9gpDS-s">
+        <img src="https://img.youtube.com/vi/P_DG9gpDS-s/hqdefault.jpg" alt="Sound Design Video">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sound Asset Packs -->
+  <section class="section">
+    <div class="metallic-bar">SOUND ASSET PACKS</div>
+    <div class="two-column">
+      <a class="link-box" href="https://assetstore.unity.com/publishers/39677" target="_blank">
+        Unity Asset Store
+      </a>
+      <iframe class="soundcloud" width="100%" height="200" scrolling="no" frameborder="no" 
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/goldsmithaudio">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Compositions -->
+  <section class="section">
+    <div class="metallic-bar">COMPOSITIONS</div>
+    <div class="two-column">
+      <div class="video-wrapper">
+        <div class="video-box" data-video="https://www.youtube.com/embed/BygVerZbHdo?start=418">
+          <img src="https://img.youtube.com/vi/BygVerZbHdo/hqdefault.jpg" alt="Composition 1">
+        </div>
+        <a href="composition1.html" class="view-btn">View</a>
+      </div>
+
+      <div class="video-wrapper">
+        <div class="video-box" data-video="https://www.youtube.com/embed/ytKpO0Ggjsw?start=363">
+          <img src="https://img.youtube.com/vi/ytKpO0Ggjsw/hqdefault.jpg" alt="Composition 2">
+        </div>
+        <a href="composition2.html" class="view-btn">View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="metallic-bar">MESSAGE ME</div>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script>
+    // Inline video play
+    document.querySelectorAll('.video-box').forEach(box => {
+      box.addEventListener('click', () => {
+        const videoUrl = box.getAttribute('data-video');
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('src', videoUrl + '?autoplay=1');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allowfullscreen', 'true');
+        iframe.classList.add('video-frame');
+        box.innerHTML = '';
+        box.appendChild(iframe);
+      });
+    });
+  </script>
+</body>
+</html>
