@@ -145,6 +145,17 @@ h2, h3 {
   gap: 15px;
 }
 
+.intro {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 10px auto 40px auto;
+  line-height: 1.6;
+}
+
+
 .contact-form input,
 .contact-form textarea {
   background: #000;
